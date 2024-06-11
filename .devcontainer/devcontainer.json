@@ -1,0 +1,61 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-postgres
+{
+	"name": "Backend",
+	"dockerComposeFile": "../docker-compose.local.yml",
+	"service": "api",
+	"workspaceFolder": "/workspace",
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/nestjs-cli:2": {}
+	},
+	"containerEnv": {
+		"SHELL": "/bin/bash"
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.formatOnSave": true,
+				"editor.formatOnPaste": true,
+				// "editor.defaultFormatter": "esbenp.prettier-vscode",
+				"editor.tabSize": 2,
+				"[yaml]": {
+					"editor.defaultFormatter": "redhat.vscode-yaml"
+				},
+				"github.copilot.enable": {
+					"*": true,
+					"plaintext": true,
+					"markdown": true,
+					"autocompletions": true,
+					"scminput": false
+				},
+				"github.copilot.editor.enableAutoCompletions": true
+			},
+			"extensions": [
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint",
+				"aaron-bond.better-comments",
+				"github.vscode-github-actions",
+				"GitHub.copilot",
+				"yzhang.markdown-all-in-one",
+				"christian-kohler.npm-intellisense",
+				"42Crunch.vscode-openapi",
+				"christian-kohler.path-intellisense",
+				"redhat.vscode-yaml",
+				"eamodio.gitlens",
+				"ms-vsliveshare.vsliveshare",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// This can be used to network with other containers or with the host.
+	"forwardPorts": [3000, 5432, 8888, 4983, 3001, 3002, 3003],
+
+	//   Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "npm install"
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

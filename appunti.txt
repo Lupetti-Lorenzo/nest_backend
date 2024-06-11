@@ -1,0 +1,61 @@
+NEST:
+	logging e monitoring - risolto con vercel? 
+
+README
+	panoramica architettura
+		-> api, db, auth, vercel,  
+	sviluppo
+		-> devcontainer/docker-compose
+		-> vercel, ambienti e variabili
+	test
+		-> e2e
+		-> unit
+	auth
+		-> logto - ruoli e organizzazioni, 
+		-> passport - authGuard e jwt strategy (authorize token and pass user to request context)
+		-> casl e autorizzazione - ruoli e permessi
+	db
+		-> migrazioni
+		-> drizzle 
+		-> comandi 
+			-> seeding 
+	throttler
+		-> upstash+redis oppure quello gia nel progetto
+	variabili d'ambiente
+		-> utilizzo
+		-> validazione
+	swagger doc
+		-> cosa modificare 
+		-> plugin
+	aggiungere links di ogni cosa discussa come risorsa per saperne di più
+
+DEV 
+	fare seed con sub collegato ad utenti veri gia di default, logto dev sempre setuppato. per collegare logins e utenti in dev 
+	ora che ho logto in locale fare seeding iniziale con utenti? con utente di test collegato - si
+	fixare drizzle studio con docker compose diretto
+	branch develop e setup enviroment vercel, anche altro db, volendo lo stesso ma con db diverso 
+	setup set con gh actions e enviroment di test per gli e2e
+		ambiente di test, serve un db per fare queste cose nella pipeline, inizializzato con le cose necessarie
+	
+
+throttler: provare su vercel se funziona
+	se non funziona: upstash con redis - estenzione su vercel mi pare 
+
+filtraggio:
+	funzionante 
+
+
+LOGTO:
+	esplorare organizzazioni e come impatta l'autorizzazione casl 
+	-> fare esempio con ruoli di organizations 
+
+AUTH FRONTEND
+	logto/nuxt - testare login, register e callback 
+	fare pagina profilo utente normale - info, modifica, cancella
+	register user 
+	register organization
+	pagina owner -> crea utente e assegna ruolo - tramite invitazione con logto 
+
+
+lorenzo ePVTI40c
+

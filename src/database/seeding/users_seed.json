@@ -1,0 +1,18 @@
+[
+	{
+		"email": "john@example.com",
+		"sub": "john123"
+	},
+	{
+		"email": "jane@example.com",
+		"sub": "jane456"
+	},
+	{
+		"email": "alice@example.com",
+		"sub": "alice789"
+	},
+	{
+		"email": "bob@example.com",
+		"sub": "bob101"
+	}
+]
